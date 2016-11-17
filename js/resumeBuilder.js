@@ -13,7 +13,6 @@ var bio = {
         "Pations", "Awareness", "motivation", "Being a nice person", "Somethign else"
     ],
     "biopic" : "images/fry.jpg",
-    display : function(){}
 };
 
 var education = {
@@ -51,33 +50,33 @@ var education = {
     ]
 };
 
-function displayWork(){
-    var work = {
-        "jobs" : [
-            {
-                "employer" : "H+A Marketing&PR",
-                "title" : "Web Designer",
-                "location" : "Ballincollig, Ireland",
-                "dates" : " 09.2010 - 01.2012",
-                "description" : "Created designs for internet pages"
-            },
-            {
-                "employer" : "Rocket",
-                "title" : "Web Developer",
-                "location" : "CORK, Ireland",
-                "dates" : "03.2012 - 03.2014",
-                "description" : "Front-End web development"
-            },
-            {
-                "employer" : "T-Systems",
-                "title" : "Interface Developer",
-                "location" : "Dresden, Germany",
-                "dates" : "01.11.2015 - current",
-                "description" : "From creating viduals to coding web pages"
-            }
-        ]
+
+var work = {
+    "jobs" : [
+        {
+            "employer" : "H+A Marketing&PR",
+            "title" : "Web Designer",
+            "location" : "Ballincollig, Ireland",
+            "dates" : " 09.2010 - 01.2012",
+            "description" : "Created designs for internet pages"
+        },
+        {
+            "employer" : "Rocket",
+            "title" : "Web Developer",
+            "location" : "CORK, Ireland",
+            "dates" : "03.2012 - 03.2014",
+            "description" : "Front-End web development"
+        },
+        {
+            "employer" : "T-Systems",
+            "title" : "Interface Developer",
+            "location" : "Dresden, Germany",
+            "dates" : "01.11.2015 - current",
+            "description" : "From creating viduals to coding web pages"
+        }
+    ]
 };
-}
+
 
 var projects = {
     "projects" : [
@@ -85,16 +84,18 @@ var projects = {
             "title" : "CIT",
             "dates" : "Cork, Ireland",
             "description" : "BA",
-            "images" : "google.com"
+            "image" : "images/fry.jpg"
         },
         {
             "title" : "CIT",
             "dates" : "Cork, Ireland",
             "description" : "BA",
-            "images" : "google.com"
+            "image" : "images/fry.jpg"
         }
     ]
 };
+
+
 // Header Name + Role
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
@@ -122,8 +123,8 @@ $("#header").append(formattedPic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);
 
-//write for loop here
 
+//write for loop here
 if ( bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
 
@@ -140,12 +141,7 @@ if ( bio.skills.length > 0) {
     $("#skills").append(formattedSkill);
 }
 
-
-
-
-$('#main').append(internationalizeButton);
-$('#mapDiv').append(googleMap);
-
+// Display My Work
 for ( var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
@@ -158,11 +154,23 @@ for ( var job in work.jobs) {
     var formattedEmployerTitle = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
 
     $(".work-entry:last").append(formattedEmployerTitle); //returns final element in the list
-
-
 }
 
-displayWork();
+
+// Display My Projects
+for ( var myProjects in projects.projects) {
+    $("#projects").append(HTMLprojectStart);
+
+    var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[myProjects].title);
+    var projectDates = HTMLprojectDates.replace("%data%", projects.projects[myProjects].dates);
+    var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[myProjects].description);
+    var projectImage = HTMLprojectImage.replace("%data%", projects.projects[myProjects].image);
+
+    var formattedEmployerTitle = projectTitle + projectDates + projectDescription + projectImage;
+
+    $(".project-entry:last").append(formattedEmployerTitle); //returns final element in the list
+}
+
 
 $(document).click(function(loc) { //track click location
   var x = loc.pageX;
