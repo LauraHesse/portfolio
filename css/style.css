@@ -86,7 +86,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #fff;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -135,12 +135,19 @@ a {
 .flex-box {
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 10px;
 }
 
+.flex-box li{
+    margin-right: 20px;
+}
+
+.flex-box li:first-child{
+    margin-right: 0;
+}
 .flex-column {
   display: flex;
   flex-direction: column;

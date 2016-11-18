@@ -1,14 +1,14 @@
 var bio = {
-    "name" : "Laura Hesse",
-    "role" : "Becoming a Ninja",
+    "name" : "Meet Arual",
+    "role" : "'The human being is a creativity machine'",
     "contacts" : {
         "mobile" : "123-123-123",
         "email" : "test@test.de",
         "github" : "johndoe",
         "twitter" : "@jphndoe",
-        "location" : "lietuva"
+        "location" : "Edmonton, Alberta, Canada"
     },
-    "welcomeMessage" : "Welome message here",
+    "welcomeMessage" : "I have years of graphic & web design experience. And I recently finished master program in DA in CS and online course for web development. I've worked in beijing for 5 years and US for 2 years",
     "skills" : [
         "Pations", "Awareness", "motivation", "Being a nice person", "Somethign else"
     ],
@@ -18,35 +18,33 @@ var bio = {
 var education = {
     "schools" : [
         {
-            "name" : "CIT",
-            "location" : "Cork, Ireland",
+            "name" : "CIT12",
+            "location" : "Chicago, IL",
             "degree" : "BA",
-            "majors" : ["skills", "skills2", "skills3"],
-            "dates" : 2011,
-            "url" : ["Englich", "test here"]
+            "major" : ["skills", "skills2", "skills3"],
+            "dates" : 2011
         },
         {
-            "name" : "CIT",
-            "location" : "Cork, Ireland",
+            "name" : "CIT345",
+            "location" : "Phoenix, AZ",
             "degree" : "BA",
-            "majors" : ["skills", "skills2", "skills3"],
-            "dates" : 2011,
-            "url" : ["Englich", "test here"]
-        }
+            "major" : ["skills", "skills2", "skills3"],
+            "dates" : 2011
+                }
     ],
     "onlineCourses" : [
         {
-            "title" : "tetet",
-            "school" : "erere",
-            "dates" : "dateshere",
-            "url" : "url/here"
-        },
-        {
-            "title" : "tetet",
-            "school" : "erere",
-            "dates" : "dateshere",
-            "url" : "url/here"
-        }
+		"title" : "Front End Developer Nanodegree",
+		"school" : "Udacity",
+		"dates" : "March 2015 - January 2016",
+		"url" : "https://www.udacity.com/course/intro-to-html-and-css--ud304-nd"
+	}      ,
+    {
+    "title" : "Front End Developer Nanodegree",
+    "school" : "Udacity",
+    "dates" : "March 2015 - January 2016",
+    "url" : "https://www.udacity.com/course/intro-to-html-and-css--ud304-nd"
+}
     ]
 };
 
@@ -81,15 +79,15 @@ var work = {
 var projects = {
     "projects" : [
         {
-            "title" : "CIT",
-            "dates" : "Cork, Ireland",
-            "description" : "BA",
+            "title" : "Global Mobile Internet Conference Stage Design",
+            "dates" : "October 2013",
+            "description" : "GMIC is Silicon Valley's largest annual mobile conference and expo. October 21 2013, GMIC was held at the Moscone Center in San Francisco. It attracted 10,000+ mobile industry participants, including top executives, entrepreneurs, developers, and investors from over 60 countries",
             "image" : "images/fry.jpg"
         },
         {
-            "title" : "CIT",
-            "dates" : "Cork, Ireland",
-            "description" : "BA",
+            "title" : "Global Mobile Internet Conference Stage",
+            "dates" : "October 2013",
+            "description" : "GMIC is Silicon Valley's largest annual mobile conference and expo. October 21 2013, GMIC was held at the Moscone Center in San Francisco. It attracted 10,000+ mobile industry participants, including top executives, entrepreneurs, developers, and investors from over 60 countries",
             "image" : "images/fry.jpg"
         }
     ]
@@ -98,24 +96,24 @@ var projects = {
 
 // Header Name + Role
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
+$("#header").append(formattedRole);
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedName);
+$("#header").append(formattedName);
 
 
 // Contact information
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").append(formattedMobile);
+$("#topContacts").prepend(formattedMobile);
 
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(formattedEmail);
+$("#topContacts").prepend(formattedEmail);
 
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(formattedGithub);
+$("#topContacts").prepend(formattedGithub);
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(formattedLocation);
+$("#topContacts").prepend(formattedLocation);
 
 var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedPic);
@@ -142,34 +140,75 @@ if ( bio.skills.length > 0) {
 }
 
 // Display My Work
-for ( var job in work.jobs) {
-    $("#workExperience").append(HTMLworkStart);
+function displayWork() {
+    for ( var job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
 
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
-    var formattedEmployerTitle = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
+        var formattedEmployerTitle = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
 
-    $(".work-entry:last").append(formattedEmployerTitle); //returns final element in the list
+        $(".work-entry:last").append(formattedEmployerTitle); //returns final element in the list
+    }
 }
+displayWork();
 
 
 // Display My Projects
-for ( var myProjects in projects.projects) {
-    $("#projects").append(HTMLprojectStart);
+function displayProjects() {
+    for ( var myProjects in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
 
-    var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[myProjects].title);
-    var projectDates = HTMLprojectDates.replace("%data%", projects.projects[myProjects].dates);
-    var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[myProjects].description);
-    var projectImage = HTMLprojectImage.replace("%data%", projects.projects[myProjects].image);
+        var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[myProjects].title);
+        var projectDates = HTMLprojectDates.replace("%data%", projects.projects[myProjects].dates);
+        var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[myProjects].description);
+        var projectImage = HTMLprojectImage.replace("%data%", projects.projects[myProjects].image);
 
-    var formattedEmployerTitle = projectTitle + projectDates + projectDescription + projectImage;
+        var formattedEmployerTitle = projectTitle + projectDates + projectDescription + projectImage;
 
-    $(".project-entry:last").append(formattedEmployerTitle); //returns final element in the list
+        $(".project-entry:last").append(formattedEmployerTitle); //returns final element in the list
+    }
 }
+displayProjects();
+
+// Display My Education
+function displayEducation() {
+	for(var school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		$(".education-entry:last").append(formattedName + formattedDegree);
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		$(".education-entry:last").append(formattedDates);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$(".education-entry:last").append(formattedLocation);
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		$(".education-entry:last").append(formattedMajor);
+		}
+}
+displayEducation();
+
+
+
+// Display My Online Courses
+function displayOnlineClasses() {
+	$("#education").append(HTMLonlineClasses);
+	for(var course in education.onlineCourses) {
+		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+        var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+        var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+
+        var onlineClasses = onlineTitle + onlineSchool + onlineDates + onlineURL;
+
+        $(".education-entry:last").append(onlineClasses); //returns final element in the list
+	}
+}
+displayOnlineClasses();
 
 
 $(document).click(function(loc) { //track click location
@@ -179,45 +218,4 @@ $(document).click(function(loc) { //track click location
   logClicks(x,y);
 });
 
-
-
-
-
-
-
-
-//
-//
-//
-// var formattedName = HTMLheaderName.replace("%data%", bio.bio[0]);
-// $("#header").append(formattedName);
-//
-// var formattedRole = HTMLheaderRole.replace("%data%", bio.role );
-// $("#header").append(formattedRole);
-//
-// for ( var contact in bio.contacts) {
-//     $("#topContacts").append(HTMLcontactGeneric);
-//
-//     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
-//     var formattedEmail = HTMLemail.replace("%data%", bio.contacts[contact].email);
-//     var formattedContactDetails = formattedMobile + formattedEmail;
-//
-//     $(".work-entry:last").append(formattedContactDetails); //returns final element in the list
-// }
-//
-// if (bio.skills.length > 0) {
-//     $("#header").append(HTMLskillsStart);
-//
-//     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-//     $("#skills").append(formattedSkill);
-//
-//     formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-//     $("#skills").append(formattedSkill);
-//
-//     formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-//     $("#skills").append(formattedSkill);
-//
-//     formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-//     $("#skills").append(formattedSkill);
-// }
-//
+$("#mapDiv").append(googleMap);
