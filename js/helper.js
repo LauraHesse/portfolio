@@ -12,24 +12,25 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span>';
+var HTMLheaderName = '<div class="opening-name"><h1 id="name">%data%</h1></div>';
+var HTMLheaderRole = '<div class="opening-message"><span>%data%</span></div>';
+var HTMLheaderButton = '<div class="opening-button"><button type="button" name="button">Find out more</button></div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span>%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><a href="tel:%data%"><i class="fa fa-mobile" aria-hidden="true"></i></a></li>';
 var HTMLemail = '<li class="flex-item"><a href="mailto:%data%"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>';
 var HTMLgithub = '<li class="flex-item"><a href="%data%"><i class="fa fa-behance" aria-hidden="true"></i></a></li>';
 var HTMLlocation = '<li class="flex-item"><a href="%data%"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class="opening-img"><img src="%data%" class="biopic"></div>';
+var HTMLwelcomeMsg = '<div class="welcome-message"><span>%data%</span></div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<div class="skills-h3"><h3>Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul></div>';
+var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<a href="#"><strong>%data%</strong>';
+var HTMLworkTitle = ' - %data% <i class="fa fa-external-link" aria-hidden="true"></i></a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';

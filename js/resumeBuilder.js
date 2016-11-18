@@ -8,11 +8,11 @@ var bio = {
         "twitter" : "@jphndoe",
         "location" : "Edmonton, Alberta, Canada"
     },
-    "welcomeMessage" : "I have years of graphic & web design experience. And I recently finished master program in DA in CS and online course for web development. I've worked in beijing for 5 years and US for 2 years",
+    "welcomeMessage" : "Hallo, my name is Laura (a←r←u←a←L). I have years of graphic & web design experience. And I recently finished master program in DA in CS and online course for web development. I've worked in beijing for 5 years and US for 2 years",
     "skills" : [
-        "Pations", "Awareness", "motivation", "Being a nice person", "Somethign else"
+        "Front-End Web Designer", "Interaction Developer", "Photographer", "A dreamer"
     ],
-    "biopic" : "images/fry.jpg",
+    "biopic" : "http://demo.currl.com/alto/wp-content/uploads/sites/12/2016/04/alto-girl-A.jpg",
 };
 
 var education = {
@@ -51,26 +51,34 @@ var education = {
 
 var work = {
     "jobs" : [
+
         {
-            "employer" : "H+A Marketing&PR",
-            "title" : "Web Designer",
-            "location" : "Ballincollig, Ireland",
-            "dates" : " 09.2010 - 01.2012",
-            "description" : "Created designs for internet pages"
+            "employer" : "T-Systems MMS",
+            "title" : "Interface Developer",
+            "location" : "Dresden, Germany",
+            "dates" : "November 2015 - currently working",
+            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
         },
         {
             "employer" : "Rocket",
-            "title" : "Web Developer",
-            "location" : "CORK, Ireland",
-            "dates" : "03.2012 - 03.2014",
-            "description" : "Front-End web development"
+            "title" : "Front-End Web Designer",
+            "location" : "Cork, Ireland",
+            "dates" : "March 2012 - March 2014",
+            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
         },
         {
-            "employer" : "T-Systems",
-            "title" : "Interface Developer",
-            "location" : "Dresden, Germany",
-            "dates" : "01.11.2015 - current",
-            "description" : "From creating viduals to coding web pages"
+            "employer" : "H+A Marketing&PR",
+            "title" : "Front-End Web Designer",
+            "location" : "Ballincollig, Ireland",
+            "dates" : " September 2010 - January 2012",
+            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+        },
+        {
+            "employer" : "Dublin Frash compalany",
+            "title" : "Flash Designer/Developer",
+            "location" : "Dublin, Ireland",
+            "dates" : " June 2009 - September 2009",
+            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
         }
     ]
 };
@@ -95,12 +103,11 @@ var projects = {
 
 
 // Header Name + Role
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").append(formattedRole);
-
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
-
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").append(formattedRole);
+$("#header").append(HTMLheaderButton);
 
 // Contact information
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
