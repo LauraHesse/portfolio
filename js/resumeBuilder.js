@@ -89,19 +89,19 @@ var projects = {
             "title" : "Céannacht - Irish Identity",
             "dates" : "September 2010",
             "description" : "Céannacht explores non-Irish nationals perception of Irish people. The project has been designed for non-Irish nationals to create an image of Irish. The purpose of the project is to make an Irish audience aware of the manner in which non-Irishnationals perceive them. This project focuses on Irish stereotypes and how quickly our perception of others is created.",
-            "images" : ["images/proj1_1.jpg"]
+            "images" : ["images/proj1.jpg", "images/proj1_1.jpg", "images/proj1_2.jpg"]
         },
         {
             "title" : "Pure slang of Cork",
             "dates" : "June 2009",
             "description" : "Identifying The Peoples Republic of Cork, verbal appearance.",
-            "images" : "images/proj2.jpg"
+            "images" : ["images/proj2.jpg", "images/proj2_1.jpg", "images/proj2_2.jpg"]
         },
         {
             "title" : "In one's salad days",
             "dates" : "July 2008",
             "description" : "An exploration within.",
-            "images" : "images/proj3.jpg"
+            "images" : ["images/proj3.jpg", "images/proj3_3.jpg", "images/proj3_2.jpg"]
         }
     ]
 };
@@ -116,13 +116,13 @@ $("#header").append(HTMLheaderButton);
 
 // Contact information
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").prepend(formattedMobile);
+$("#footerContacts").prepend(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").prepend(formattedEmail);
+$("#footerContacts").prepend(formattedEmail);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").prepend(formattedGithub);
+$("#footerContacts").prepend(formattedGithub);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").prepend(formattedLocation);
+$("#footerContacts").prepend(formattedLocation);
 var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedPic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -165,8 +165,13 @@ projects.display = function() {
     var formattedprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
     var formattedprojectDates = HTMLprojectDates.replace("%data%", project.dates);
     var formattedprojectDescription = HTMLprojectDescription.replace("%data%", project.description);
-    var formattedprojectimage = HTMLprojectImage.replace("%data%", project.images);
-    var formattedproject = formattedprojectTitle + formattedprojectDates + formattedprojectDescription + formattedprojectimage;
+
+    for (var x = 0; x < project.images.length; x++ ) {
+       var formattedprojectimage = HTMLprojectImage.replace("%data%", project.images[x]);
+       $(".project-entry:last").append(formattedprojectimage);
+    }
+
+    var formattedproject = formattedprojectTitle + formattedprojectDates + formattedprojectDescription ;
     $(".project-entry:last").append(formattedproject);
 
   });

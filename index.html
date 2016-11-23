@@ -23,13 +23,14 @@
 <body>
     <header>
         <ul class="flex-box">
-            <li><a href="#meet">Meet Arual</a></li>
-            <li><a href="#meet">Work Experience</a></li>
-            <li><a href="#meet">Projects</a></li>
-            <li><a href="#meet">Education</a></li>
-            <li><a href="#meet">Contact</a></li>
+            <li><a href="#header">Meet Arual</a></li>
+            <li><a href="#workExperience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#mapDiv">Contact</a></li>
         </ul>
     </header>
+
   <div id="main">
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
@@ -43,6 +44,20 @@
 
     <div id="projects">
       <h2>Projects</h2>
+
+      <!-- Trigger the Modal -->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+      </div>
     </div>
 
     <div id="education" class="gray">
