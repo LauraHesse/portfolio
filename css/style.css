@@ -9,25 +9,25 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
-  font-family: 'Josefin Slab', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    padding:0;
+    margin:0;
+    font-family: 'Josefin Slab', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 
 }
 
 body {
-  padding-top: 40px; // same as header height
+    padding-top: 40px; // same as header height
 }
 header {
-  background: rgba(42, 59, 79, 0.85);
-  position: fixed;
-  top: 0;
-  transition: top 0.2s ease-in-out;
-  width: 100%;
-  z-index: 4;
+    background: rgba(42, 59, 79, 0.85);
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 4;
 }
 .nav-up {
-  top: -40px; // same as header height. use variables in LESS/SASS
+    top: -40px; // same as header height. use variables in LESS/SASS
 }
 
 #topContacts a {
@@ -35,124 +35,124 @@ header {
 }
 
 .clear-fix {
-  overflow: auto;
+    overflow: hidden;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
-  max-width: 50rem;
-  margin: 0 auto;
-  padding: 20px 0;
-  border-bottom: 1px dashed lightgray;
+    padding: 0 5%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px dashed lightgray;
 
 }
 
 .work-entry a,
 .project-entry a,
 .education-entry a {
-    color: #b6a50f;
+    color: #af2059;
     font-size: 18px;
 }
 
 .img {
     position: relative;
-   float: left;
-   width: 250px;
+    float: left;
+    width: 250px;
     height: 200px;
-   background-position: 50% 50%;
-   background-repeat:   no-repeat;
-   background-size:     cover;
-   margin-right: 10px;
-margin-bottom: 10px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {
-   border-radius: 5px;
-   cursor: pointer;
-   transition: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
-   display: none; /* Hidden by default */
-   position: fixed; /* Stay in place */
-   z-index: 1; /* Sit on top */
-   padding-top: 100px; /* Location of the box */
-   left: 0;
-   top: 0;
-   width: 100%; /* Full width */
-   height: 100%; /* Full height */
-   overflow: auto; /* Enable scroll if needed */
-   background-color: rgb(0,0,0); /* Fallback color */
-   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
 .modal-content {
-   margin: auto;
-   display: block;
-   width: 80%;
-   max-width: 700px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
-   margin: auto;
-   display: block;
-   width: 80%;
-   max-width: 700px;
-   text-align: center;
-   color: #ccc;
-   padding: 10px 0;
-   height: 150px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }
 
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption {
-   -webkit-animation-name: zoom;
-   -webkit-animation-duration: 0.6s;
-   animation-name: zoom;
-   animation-duration: 0.6s;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-   from {-webkit-transform:scale(0)}
-   to {-webkit-transform:scale(1)}
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-   from {transform:scale(0)}
-   to {transform:scale(1)}
+    from {transform:scale(0)}
+    to {transform:scale(1)}
 }
 
 /* The Close Button */
 .close {
-   position: absolute;
-   top: 15px;
-   right: 35px;
-   color: #f1f1f1;
-   font-size: 40px;
-   font-weight: bold;
-   transition: 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-   color: #bbb;
-   text-decoration: none;
-   cursor: pointer;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-   .modal-content {
-       width: 100%;
-   }
+    .modal-content {
+        width: 100%;
+    }
 }
 
 
@@ -164,6 +164,7 @@ margin-bottom: 10px;
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: #57788C;
+    padding-top: 3rem;
 }
 
 #education h3 {
@@ -172,137 +173,146 @@ margin-bottom: 10px;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  letter-spacing: -1px;
-  font-size: 6em;
-  color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: -1px;
+    font-size: 6em;
+    color: #FFFFFF;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #999;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-style: italic;
+    font-size: 20px;
+    color: #000;
+    line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
+    padding:10px 5%;
 
 }
 
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
 
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-  margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    line-height: 26px;
+    margin-top: 10px;
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+    font-style: italic;
+    font-size: 18px;
+    color: #f3f3f3;
+    line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+    color: #f5ae23;
+    display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+    background-color: #f5ae23;
 }
 
 .orange-text {
-  color: #f5ae23;
+    color: #f5ae23;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #fff;
+    font-weight: bold;
+    color: #fff;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  clear:both;
-  position: relative;
+    background-color: #f3f3f3;
+    clear:both;
+    position: relative;
     z-index: 2;
 }
 
 .dark-gray {
-  background-color: rgb(42, 59, 79);
+    background-color: rgb(42, 59, 79);
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
-  margin-top: 6rem;
-  display: flex;
-  flex-direction: column;
+    background-color: #484848;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/girl.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 900px;
 }
 .opening-name,
 .opening-message,
 .opening-button {
     margin: 0 auto;
     width: 100%;
-    max-width: 60rem;
+    max-width: 54rem;
     z-index: 2;
     position: relative;
 
 }
 
+.opening-name h1{
+    margin-top: 4rem;
+}
 .opening-img {
     position: absolute;
-      top: -2rem;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      background-color: #57788C;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #57788C;
 }
 .opening-img img {
     max-width: 100vw;
@@ -323,33 +333,41 @@ button {
     color: #fff;
     text-transform: uppercase;
 }
- button:hover {
-     cursor:  pointer;
-     color: red;
-     border-color: red;
- }
+button:hover {
+    cursor:  pointer;
+    color: red;
+    border-color: red;
+}
 
 .welcome-message,
 .skills-h3 {
- position: relative;
- z-index: 2;
- padding: 5rem 5rem 2rem 5rem;
-line-height: 1.6;
-max-width: 50rem;
-margin: 0 auto;
-background: #fff;
-top: 6rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    z-index: 2;
+    padding: 2rem;
+    line-height: 1.6;
+    max-width: 50rem;
+    background: #fff;
+
+    opacity: 0.9;
+}
+
+.welcome-message {
+    top: 26rem;
+}
+.skills-h3 {
+    top: 37rem;
 }
 
 .welcome-message span {
     color: black;
 }
 
-.skills-h3 {
-    padding: 0 5rem;
-    padding-bottom: 6rem;
-    z-index: 3;
-}
+
 
 .skills-h3 h3 {
     padding: 0;
@@ -366,27 +384,27 @@ top: 6rem;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 10px;
-  position: relative;
-  z-index: 5;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+    z-index: 5;
 }
 
 header ul.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-  position: relative;
-  z-index: 6;
-  width: 50%;
-  margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    position: relative;
+    z-index: 6;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .flex-box li {
@@ -397,71 +415,173 @@ header ul.flex-box {
     margin-right: 0;
 }
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 span {
-  font-family: 'Josefin Slab', serif;
-  color: #fff;
-  font-style: italic;
-  font-size: 1.3rem;
+    font-family: 'Josefin Slab', serif;
+    color: #fff;
+    font-style: italic;
+    font-size: 1.3rem;
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    }
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
+    .welcome-message {
+        display: none;
+    }
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+
+    .opening-button {
+        display: none;
+    }
+    .welcome-message, .skills-h3 {
+        max-width: 40rem;
+    }
+
+    .welcome-message {
+        top: 22rem;
+    }
+    .skills-h3 {
+        top: 35rem;
+    }
+
+    .education-entry, .work-entry, .project-entry {
+        max-width: 42rem;
+    }
+
+    header ul.flex-box  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+
+    }
+    .flex-box li:first-child {
+        margin-right: 20px;
+    }
+}
+
+
+/* skillbar */
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+    width:180px;
+	font-weight:bold;
+	font-size:10px;
+	color:#ffffff;
+	background:#2e4056;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#af2059;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
 }

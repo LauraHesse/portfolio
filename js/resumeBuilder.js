@@ -11,6 +11,9 @@ var bio = {
     "skills" : [
         "Front-End Web Designer", "Interaction Developer", "Photographer", "A dreamer"
     ],
+    "procent" : [
+        "89%", "76%", "56%", "100%"
+    ],
     "biopic" : "images/girl.jpg"
 };
 
@@ -123,8 +126,8 @@ var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#footerContacts").prepend(formattedGithub);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#footerContacts").prepend(formattedLocation);
-var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-$("#header").append(formattedPic);
+// var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+// $("#header").append(formattedPic);
 var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);
 
@@ -141,6 +144,11 @@ if ( bio.skills.length > 0) {
     $("#skills").append(formattedSkill);
     formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
     $("#skills").append(formattedSkill);
+
+    var formattedProcent = HTMLskills.replace("%data%", bio.procent[0]);
+    formattedProcent = HTMLskills.replace("%data%", bio.procent[1]);
+    formattedProcent = HTMLskills.replace("%data%", bio.procent[2]);
+    formattedProcent = HTMLskills.replace("%data%", bio.procent[3]);
 }
 
 // Display My Work
@@ -166,13 +174,14 @@ projects.display = function() {
     var formattedprojectDates = HTMLprojectDates.replace("%data%", project.dates);
     var formattedprojectDescription = HTMLprojectDescription.replace("%data%", project.description);
 
+
     for (var x = 0; x < project.images.length; x++ ) {
        var formattedprojectimage = HTMLprojectImage.replace("%data%", project.images[x]);
        $(".project-entry:last").append(formattedprojectimage);
     }
-
     var formattedproject = formattedprojectTitle + formattedprojectDates + formattedprojectDescription ;
-    $(".project-entry:last").append(formattedproject);
+    $(".project-entry:last").prepend(formattedproject);
+
 
   });
 };
@@ -206,3 +215,12 @@ education.onlineCourses.forEach(function(course) {
 education.display();
 
 $("#mapDiv").append(googleMap);
+
+
+jQuery(document).ready(function(){
+    jQuery('.skillbar').each(function(){
+        jQuery(this).find('.skillbar-bar').animate({
+            width:jQuery(this).attr('data-percent')
+        },4000);
+    });
+});

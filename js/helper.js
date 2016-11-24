@@ -22,11 +22,11 @@ var HTMLemail = '<li class="flex-item"><a href="mailto:%data%"><i class="fa fa-e
 var HTMLgithub = '<li class="flex-item"><a href="%data%"><i class="fa fa-behance" aria-hidden="true"></i></a></li>';
 var HTMLlocation = '<li class="flex-item"><a href="%data%"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>';
 
-var HTMLbioPic = '<div class="opening-img"><img src="%data%" class="biopic"></div>';
+//var HTMLbioPic = '<div class="opening-img"><img src="%data%" class="biopic"></div>';
 var HTMLwelcomeMsg = '<div class="welcome-message"><span>%data%</span></div>';
 
 var HTMLskillsStart = '<div class="skills-h3"><h3>Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul></div>';
-var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
+var HTMLskills = '<div class="skillbar clearfix " data-percent="90%"><div class="skillbar-title"><span>%data%</span></div><div class="skillbar-bar"></div><div class="skill-bar-percent">90%</div></div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#"><strong>%data%</strong>';
@@ -301,7 +301,7 @@ var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('myImg');
-var modalImg = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
     modal.style.display = "block";
