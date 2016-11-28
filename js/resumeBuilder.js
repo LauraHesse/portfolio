@@ -7,7 +7,7 @@ var bio = {
         "github" : "arualh",
         "location" : "Dresden, Germany"
     },
-    "welcomeMessage" : "Hallo, my name is Laura (a←r←u←a←L). I have years of graphic & web design experience. And I recently finished master program in DA in CS and online course for web development. I've worked in beijing for 5 years and US for 2 years",
+    "welcomeMessage" : "Hallo, my name is Laura (a←r←u←a←L). I'm Lithuanian, born and raised. Since I was 18, I moved to Ireland,where I completed my Multimedia studies and gained 4 years of work experience as a Web Designer. Since 2013, I've relocated myself to Dresden, Germany. Here I work as a Interface Developer at T-Systems MMS.",
     "skills" : [
         "Front-End Web Designer", "Interaction Developer", "Photographer", "A dreamer"
     ],
@@ -20,33 +20,33 @@ var bio = {
 var education = {
     "schools" : [
         {
-            "name" : "CIT12",
+            "name" : "Kretingos Jurgio Pabrėžos universitetinė gimnazija",
             "location" : "Kretinga, Lithuania",
-            "degree" : "BA",
-            "majors" : ["skills", "skills2", "skills3"],
-            "dates" : 2011
+            "degree" : "Atestatinis Pazymejimas",
+            "majors" : ["Read", " Write", " Question", " Be resourceful", " Think critically", " Be happy"],
+            "dates" : "1994 - 2004"
         },
         {
-            "name" : "CIT345",
+            "name" : "Cork Institute of Technology",
             "location" : "Cork, Ireland",
-            "degree" : "BA",
-            "majors" : ["skills", "skills2", "skills3"],
-            "dates" : 2011
+            "degree" : "Bachelor (Honours) in Multimedia (Level 8)",
+            "majors" : ["Graphics", " Applied Programming", " Photography", " Interactive art", " Journalism", " Media Culture"],
+            "dates" : "2006 - 2010"
                 }
     ],
     "onlineCourses" : [
         {
 		"title" : "Front End Developer Nanodegree",
 		"school" : "Udacity",
-		"dates" : "March 2015 - January 2016",
-		"url" : "https://www.udacity.com/course/intro-to-html-and-css--ud304-nd"
+		"dates" : "September 2016 - currently",
+		"url" : "www.udacity.com"
 	}      ,
     {
-    "title" : "Front End Developer Nanodegree",
-    "school" : "Udacity",
-    "dates" : "March 2015 - January 2016",
-    "url" : "https://www.udacity.com/course/intro-to-html-and-css--ud304-nd"
-}
+    "title" : "Front End Development Certification",
+    "school" : "FreeCodeCamp",
+    "dates" : "March 2016 - July 2016",
+    "url" : "www.freecodecamp.com"
+  }
     ]
 };
 
@@ -59,28 +59,28 @@ var work = {
             "title" : "Interface Developer",
             "location" : "Dresden, Germany",
             "dates" : "November 2015 - currently working",
-            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            "description" : "Participate in technical planning & requirements gathering phases including design, code, test, troubleshoot, and document business software applications. Develop Web and mobile applications in front-end technologies including HTML5, CSS, JavaScript. Demonstrate the ability to adapt and work with team members of various experience level."
         },
         {
             "employer" : "Rocket",
             "title" : "Front-End Web Designer",
             "location" : "Cork, Ireland",
             "dates" : "March 2012 - March 2014",
-            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            "description" : "Use markup languages like HTML to create user-friendly web pages. Maintain and improve websites. Design mobile-based features. Stay up-to-date on emerging technologies."
         },
         {
-            "employer" : "H+A Marketing&PR",
+            "employer" : "H+A Marketing + PR",
             "title" : "Front-End Web Designer",
-            "location" : "Ballincollig, Ireland",
+            "location" : "Ballincollig, Cork, Ireland",
             "dates" : " September 2010 - January 2012",
-            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            "description" : "Project managed a small team to reach creatively structured tasks in order to meet targets. We have created a Flash based tutorial for online home users. Perfect time management skills. Team-motivated with a desire to succeed."
         },
         {
-            "employer" : "Dublin Frash compalany",
+            "employer" : "Third Force",
             "title" : "Flash Designer/Developer",
-            "location" : "Dublin, Ireland",
-            "dates" : " June 2009 - September 2009",
-            "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            "location" : "Blackrock, Co. Dublin, Ireland",
+            "dates" : " May 2009 - July 2009",
+            "description" : "Built and implemented e-Learning program for web-based system using elearning development tool - Flash. Met weekly targets; delivered the final product on time. Strong communication skills with colleagues. Project driven, worked in professional business environment."
         }
     ]
 };

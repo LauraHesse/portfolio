@@ -167,10 +167,19 @@ header {
     padding-top: 3rem;
 }
 
-#education h3 {
+#education h3{
     max-width: 50rem;
     margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    color: #57788C;
 }
+
+#mapDiv h2 {
+  font-family: 'Playfair Display', serif;
+  color: #57788C;
+  margin-top: 3rem;
+}
+
 
 h1 {
     font-family: 'Playfair Display', serif;
@@ -258,8 +267,9 @@ a {
     background-color: #f5ae23;
 }
 
-.orange-text {
-    color: #f5ae23;
+.white{
+    color: #fff;
+    padding: 10px 2%;
 }
 
 .white-text {
@@ -394,6 +404,9 @@ button:hover {
     z-index: 5;
 }
 
+li.flex-item a {
+  cursor: pointer;
+}
 header ul.flex-box {
     display: -webkit-flex;
     display: flex;
@@ -460,8 +473,10 @@ span {
     .biopic {
         width: 150px;
     }
-    .welcome-message {
-        display: none;
+
+    .welcome-message, .skills-h3 {
+        max-width: 40rem;
+        border: 1px solid red;
     }
 }
 
@@ -482,9 +497,7 @@ span {
     .opening-button {
         display: none;
     }
-    .welcome-message, .skills-h3 {
-        max-width: 40rem;
-    }
+
 
     .welcome-message {
         top: 22rem;
