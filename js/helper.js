@@ -26,30 +26,31 @@ var HTMLlocation = '<li class="flex-item"><a href="%data%"><i class="fa fa-map-m
 var HTMLwelcomeMsg = '<div class="welcome-message"><span>%data%</span></div>';
 
 var HTMLskillsStart = '<div class="skills-h3"><h3>Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul></div>';
-var HTMLskills = '<div class="skillbar clearfix " data-percent="90%"><div class="skillbar-title"><span>%data%</span></div><div class="skillbar-bar"></div><div class="skill-bar-percent">90%</div></div>';
+var HTMLskills = '<div class="skillbar clearfix " data-percent="#"><div class="skillbar-title"><span>%data%</span></div><div class="skillbar-bar"></div><div class="skill-bar-percent">:)</div></div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#"><strong>%data%</strong>';
+var HTMLworkEmployer = '<a href="#" target="_blank"><strong>%data%</strong>';
 var HTMLworkTitle = ' - %data% <i class="fa fa-external-link" aria-hidden="true"></i></a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#"><strong>%data%</strong></a>';
+var HTMLprojectTitle = '<a href="#" target="_blank"><strong>%data%</strong></a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img id="myImg" class="img" style="background-image:url(%data%);">';
+var HTMLprojectImage = '<img src="%data%" class="img">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#"> <strong>%data%</strong>';
+var HTMLschoolName = '<a href="#" target="_blank"> <strong>%data%</strong>';
 var HTMLschoolDegree = ' - %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
+
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#"><strong>%data%</strong>';
+var HTMLonlineTitle = '<a href="#" target="_blank"><strong>%data%</strong>';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
@@ -294,25 +295,3 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-};
