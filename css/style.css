@@ -61,14 +61,6 @@ header {
 }
 
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
-
 #workExperience h2,
 #projects h2,
 #education h2{
@@ -283,7 +275,7 @@ button:hover {
     top: 26rem;
 }
 .skills-h3 {
-    top: 37rem;
+    top: 36rem;
 }
 
 .welcome-message span {
@@ -378,8 +370,8 @@ span {
         width: 175px;
     }
 }
-
-@media only screen and (max-width: 750px) {
+/* iPad */
+@media only screen and (max-width: 769px) {
 
     #header {
         min-height: 1000px;
@@ -411,7 +403,12 @@ span {
         top: 33rem;
     }
     .skills-h3 {
-      visibility: hidden;
+      top: 38rem;
+      max-width: 40rem;
+    }
+
+    .img {
+      max-width: 200px;
     }
 }
 
@@ -427,6 +424,29 @@ span {
     padding-bottom: 5%;
 }
 
+/* iPhone */
+@media only screen and (max-width: 414px) {
+  .skills-h3 {
+    display: none;
+  }
+
+  .img {
+    max-width: 100px;
+  }
+
+  #workExperience h2, #projects h2, #education h2 {
+    padding-top: 2rem;
+  }
+
+  #mapDiv h2 {
+    margin-top: 1rem;
+  }
+
+  #header {
+    min-height: 900px;
+  }
+}
+
 @media only screen and (min-width: 750px) {
 
     .opening-button {
@@ -437,9 +457,7 @@ span {
     .welcome-message {
         top: 22rem;
     }
-    .skills-h3 {
-        top: 35rem;
-    }
+
 
 
 
