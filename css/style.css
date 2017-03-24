@@ -16,7 +16,7 @@ h6 {
 }
 
 body {
-    padding-top: 40px; // same as header height
+    padding-top: 40px;
 }
 header {
     background: rgba(42, 59, 79, 0.85);
@@ -27,7 +27,7 @@ header {
     z-index: 4;
 }
 .nav-up {
-    top: -40px; // same as header height. use variables in LESS/SASS
+    top: -40px;
 }
 
 #topContacts a {

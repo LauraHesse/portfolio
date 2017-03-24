@@ -5,16 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Portfolio from Arual" />
+    <meta name="description" content="Portfolio from Laura Hesse" />
     <title>Arual's Resume</title>
 
     <!-- Load the page styles. -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Playfair+Display:900" rel="stylesheet">
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <link href="css/style.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -79,17 +74,20 @@
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+  <script src="js/jQuery.min.js"></script>
 
   <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
+  <script src="js/helper.min.js"></script>
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
-  <script src="js/resumeBuilder.js"></script>
+  <script src="js/resumeBuilder.min.js"></script>
 
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
@@ -138,3 +136,22 @@
   </script>
 </body>
 </html>
+
+      <noscript id="deferred-styles">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Playfair+Display:900" rel="stylesheet">
+
+      </noscript>
+      <script>
+        var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("deferred-styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+      </script>
